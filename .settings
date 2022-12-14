@@ -1,0 +1,9 @@
+name: article
+version: v1
+service: Article
+kratosLayout: https://github.com/timurkash/kratos-layout.git
+templateRepo: gitlab.com/mcsolutions/find-psy/back/kratos-template
+
+project: find-psy
+email: timurkash@yandex.ru
+description: Articles

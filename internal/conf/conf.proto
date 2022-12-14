@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package kratos.api;
+
+option go_package = "gitlab.com/mcsolutions/find-psy/back/article-v1/internal/conf;conf";
+
+import "common/duration/duration.proto";
+import "common/configs.proto";
+
+message Bootstrap {
+  common.Server server = 1;
+  common.Jwks jwks = 2;
+  common.Trace trace = 3;
+  common.Sentry sentry = 4;
+  Data data = 5;
+  Business business = 6;
+}
+
+message Data {
+  common.Relational relational = 1;
+  common.Redis redis = 2;
+}
+
+message Business {
+  common.Duration publish_duration = 1;
+  int32 shorten_limit = 2;
+}
